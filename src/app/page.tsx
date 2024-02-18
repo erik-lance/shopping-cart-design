@@ -2,9 +2,7 @@ import ShoppingCart from "@/components/Cart";
 import CartItem from "@/components/CartItem";
 import Checkout from "@/components/Checkout";
 import ThemeWrapper from "@/components/ThemeWrapper";
-import { Container, Divider, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
-import Image from "next/image";
 
 export default function Home() {
     return (
@@ -14,6 +12,7 @@ export default function Home() {
                     {/* Shopping Cart */}
                     <Grid item xs={8}>
                         <ShoppingCart>
+                            {/* Can be replaced with a map of the json data later on */}
                             <CartItem id={1} name="Item 1"></CartItem>
                         </ShoppingCart>
                     </Grid>
