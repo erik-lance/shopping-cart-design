@@ -1,3 +1,5 @@
+import ShoppingCart from "@/components/Cart";
+import CartItem from "@/components/CartItem";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import { Container, Divider, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
@@ -10,32 +12,9 @@ export default function Home() {
                 <Grid container spacing={2}>
                     {/* Shopping Cart */}
                     <Grid item xs={8}>
-                        <Container className="bg-slate-300 p4">
-                            <Container className="flex justify-between">
-                                <Typography variant="h4" component="h1">
-                                    Shopping Cart
-                                </Typography>
-                                <Typography variant="h6" component="h2">
-                                    Price
-                                </Typography>
-                            </Container>
-
-                            <Divider />
-
-                            {/* Insert Items Here */}
-
-                            {/* Subtotal float right */}
-                            <Divider />
-                            <Container className="flex justify-between">
-                                <Typography variant="h6" component="h2">
-
-                                </Typography>
-                                <Typography variant="h6" component="h2">
-                                    Subtotal (0 Items): $0.00
-                                </Typography>
-                            </Container>
-
-                        </Container>
+                        <ShoppingCart>
+                            <CartItem id={1} name="Item 1"></CartItem>
+                        </ShoppingCart>
                     </Grid>
 
                     {/* Checkout Button */}
