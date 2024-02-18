@@ -1,5 +1,6 @@
 import ShoppingCart from "@/components/Cart";
 import CartItem from "@/components/CartItem";
+import Checkout from "@/components/Checkout";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import { Container, Divider, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
@@ -19,9 +20,7 @@ export default function Home() {
 
                     {/* Checkout Button */}
                     <Grid item xs={4}>
-                        <Container className="bg-slate-300 p-4">
-
-                        </Container>
+                        <Checkout />
                     </Grid>
                 </Grid>
             </ThemeWrapper>
