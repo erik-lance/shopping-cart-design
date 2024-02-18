@@ -22,7 +22,18 @@ export default function Home() {
 
               <Divider />
 
+              {/* Insert Items Here */}
 
+              {/* Subtotal float right */}
+              <Divider />
+              <Container className="flex justify-between">
+                <Typography variant="h6" component="h2">
+                  
+                </Typography>
+                <Typography variant="h6" component="h2">
+                  Subtotal (0 Items): $0.00
+                </Typography>
+              </Container>
 
             </Container>
           </Grid>
