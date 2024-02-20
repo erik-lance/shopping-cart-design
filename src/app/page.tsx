@@ -1,3 +1,6 @@
+'use client';
+
+import useHotjar from "@/hooks/useHotjar";
 import ShoppingCart from "@/components/Cart";
 import CartItem from "@/components/CartItem";
 import Checkout from "@/components/Checkout";
@@ -5,6 +8,8 @@ import ThemeWrapper from "@/components/ThemeWrapper";
 import { Grid } from "@mui/material";
 
 export default function Home() {
+    useHotjar();
+
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
             <ThemeWrapper>
