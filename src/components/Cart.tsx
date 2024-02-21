@@ -39,7 +39,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ children }) => {
 
             <Divider />
 
-            <Typography variant="body1" component="h2" className="flex justify-end text-lg leading-6">
+            <Typography variant="body1" component="h2" className="flex justify-end text-lg/6 mt-1">
                 Subtotal (0 Items):  <span className="font-bold pl-1">$0.00</span>
             </Typography>
 
