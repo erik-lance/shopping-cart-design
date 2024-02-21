@@ -1,7 +1,14 @@
 import { createTheme } from '@mui/material/styles';
-// Import fontsource here
+
 
 const theme = createTheme({
+    typography: {
+        fontFamily: [
+            'Amazon Ember', 
+            'Arial', 
+            'sans-serif'
+        ].join(','),
+    }
 });
 
 export default theme;
