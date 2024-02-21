@@ -8,6 +8,11 @@ const theme = createTheme({
             'Arial', 
             'sans-serif'
         ].join(','),
+        // For "Shopping Cart" set to 'h4' variant
+        h4: {
+            fontSize: '28px',
+            lineHeight: '36px',
+        }
     }
 });
 
