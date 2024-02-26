@@ -92,7 +92,7 @@ export default function CartItem(props: CartItemProps) {
                         renderValue={(selectValue) => `Qty: ${selectValue}`}
                         inputProps={{ 'aria-label': 'Without label' }}
                         sx={{
-                            padding: '6px 0px 6px 14px'
+                            '& .MuiSelect-select': { padding: '6px 0px 6px 14px' }
                         }}
                         className="rounded-[7px] shadow-md text-[13px]"
                     >
