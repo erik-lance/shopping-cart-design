@@ -10,9 +10,10 @@ import CheckIcon from "@mui/icons-material/Check";
 interface CheckoutProps {
   quantities: { [id: number]: number };
   prices: { [id: number]: number };
+  onCheckout: () => void;
 }
 
-const Checkout: React.FC<CheckoutProps> = ({ quantities, prices }) => {
+const Checkout: React.FC<CheckoutProps> = ({ quantities, prices, onCheckout }) => {
   const totalQuantity: number = Object.values(quantities).reduce(
     (total: number, quantity: number) => total + quantity,
     0
@@ -57,6 +58,7 @@ const Checkout: React.FC<CheckoutProps> = ({ quantities, prices }) => {
       <Button
         variant="contained"
         className="w-full bg-yellow-500 text-black py-2 rounded-none"
+        onClick={onCheckout}
       >
         Proceed to checkout
       </Button>
