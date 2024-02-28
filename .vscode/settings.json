@@ -1,5 +1,12 @@
 {
-    "cSpell.words": [
-        "hotjar"
-    ]
+  "cSpell.words": ["hotjar"],
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.format": true
+  },
+  "git.enableSmartCommit": false,
+  "git.suggestSmartCommit": false
 }
