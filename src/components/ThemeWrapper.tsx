@@ -1,6 +1,7 @@
 'use client'
 import theme from '@/styles/theme'
 import { ThemeProvider } from '@emotion/react'
+import { StyledEngineProvider } from '@mui/material';
 import React, { ReactNode } from 'react'; // Import ReactNode type
 
 interface ThemeWrapperProps {
@@ -9,9 +10,11 @@ interface ThemeWrapperProps {
 
 const ThemeWrapper: React.FC<ThemeWrapperProps> = ({ children }) => {
     return (
-        <ThemeProvider theme={theme}>
-            {children}
-        </ThemeProvider>
+        <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={theme}>
+                {children}
+            </ThemeProvider>
+        </StyledEngineProvider>
     );
 };
 
