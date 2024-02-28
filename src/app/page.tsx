@@ -75,12 +75,12 @@ export default function Home() {
   const [quantities, setQuantities] = useState(
     sampleCartItems.reduce(
       (acc, item) => ({ ...acc, [item.id]: item.quantity }),
-      {}
-    )
+      {},
+    ),
   );
   const prices = sampleCartItems.reduce(
     (acc, item) => ({ ...acc, [item.id]: item.price }),
-    {}
+    {},
   );
 
   const handleQuantityChange = (id: number, quantity: number) => {

@@ -1,5 +1,12 @@
-import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from '@mui/material';
+import React from "react";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Button,
+} from "@mui/material";
 
 interface EndDialogProps {
   open: boolean;
@@ -7,18 +14,18 @@ interface EndDialogProps {
   onTryAgain: () => void;
 }
 
-const EndDialog: React.FC<EndDialogProps> = ({ open, timeElapsed, onTryAgain }) => (
+const EndDialog: React.FC<EndDialogProps> = ({
+  open,
+  timeElapsed,
+  onTryAgain,
+}) => (
   <Dialog open={open}>
     <DialogTitle>End Timer</DialogTitle>
     <DialogContent>
-      <DialogContentText>
-        Time elapsed: {timeElapsed} seconds
-      </DialogContentText>
+      <DialogContentText>Time elapsed: {timeElapsed} seconds</DialogContentText>
     </DialogContent>
     <DialogActions>
-      <Button onClick={onTryAgain}>
-        Try Again
-      </Button>
+      <Button onClick={onTryAgain}>Try Again</Button>
     </DialogActions>
   </Dialog>
 );

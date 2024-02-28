@@ -8,7 +8,7 @@ const useHotjar = () => {
   useEffect(() => {
     if (isNaN(hotjarSiteId) || isNaN(hotjarVersion)) {
       console.error(
-        "Invalid NEXT_PUBLIC_HOTJAR_ID or NEXT_PUBLIC_HOTJAR_VERSION"
+        "Invalid NEXT_PUBLIC_HOTJAR_ID or NEXT_PUBLIC_HOTJAR_VERSION",
       );
       return;
     }

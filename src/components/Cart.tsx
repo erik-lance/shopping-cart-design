@@ -18,13 +18,13 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
 }) => {
   const totalQuantity: number = Object.values(quantities).reduce(
     (total: number, quantity: number) => total + quantity,
-    0
+    0,
   );
 
   const totalPrice: number = Object.entries(quantities).reduce(
     (total: number, [id, quantity]: [string, number]) =>
       total + quantity * prices[Number(id)],
-    0
+    0,
   );
 
   return (

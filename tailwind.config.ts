@@ -14,8 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        'amazon-ember': ['Amazon Ember', 'Arial', 'sans-serif']
-      }
+        "amazon-ember": ["Amazon Ember", "Arial", "sans-serif"],
+      },
     },
   },
   plugins: [],

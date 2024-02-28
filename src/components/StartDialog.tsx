@@ -1,5 +1,12 @@
-import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from '@mui/material';
+import React from "react";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Button,
+} from "@mui/material";
 
 interface StartDialogProps {
   open: boolean;
@@ -15,9 +22,7 @@ const StartDialog: React.FC<StartDialogProps> = ({ open, onStart }) => (
       </DialogContentText>
     </DialogContent>
     <DialogActions>
-      <Button onClick={onStart}>
-        Start
-      </Button>
+      <Button onClick={onStart}>Start</Button>
     </DialogActions>
   </Dialog>
 );
