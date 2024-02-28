@@ -4,25 +4,33 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, duplicate `.env.local.example` and rename to `.env.local`
+1. Duplicate `.env.local.example` and rename to `.env.local`.
 
-Then install dependencies and run the development server:
+2. Install dependencies.
 
 ```bash
 npm i
+```
+
+3. Setup Husky (for pre-commit).
+
+```bash
+npm run prepare
+```
+
+> Note:
+> Run the following if you're facing errors when pushing a commit.
+>
+> ```bash
+> rm -rf .git/hooks/
+> npm uninstall husky
+> npm install --save-dev husky
+> ```
+
+4. Run the development server.
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Next.js deployment documentation](https://nextjs.org/docs/deployment) - for deployment details.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
