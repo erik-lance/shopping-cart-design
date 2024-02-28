@@ -11,7 +11,7 @@ const StartDialog: React.FC<StartDialogProps> = ({ open, onStart }) => (
     <DialogTitle>Start Timer</DialogTitle>
     <DialogContent>
       <DialogContentText>
-        Click {"Start"} to start the timer.
+        Click &quot;Start&quot; to start the timer.
       </DialogContentText>
     </DialogContent>
     <DialogActions>
