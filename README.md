@@ -22,10 +22,15 @@ npm run prepare
 > Run the following if you're facing errors when pushing a commit.
 >
 > ```bash
+> # delete ".git/hooks/" folder manually
+> # or run the line below in PowerShell
 > rm -rf .git/hooks/
 > npm uninstall husky
 > npm install --save-dev husky
 > ```
+>
+> If you're using GitHub Desktop, make sure to add `C:\Program Files\Git\bin` to your PATH.
+> Learn more in this [solution](https://github.com/desktop/desktop/issues/17385#issuecomment-1718170235)
 
 4. Run the development server.
 
