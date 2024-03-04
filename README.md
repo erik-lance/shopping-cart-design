@@ -29,8 +29,9 @@ npm run prepare
 > npm install --save-dev husky
 > ```
 >
-> If you're using GitHub Desktop, make sure to add `C:\Program Files\Git\bin` to your PATH.
-> Learn more in this [solution](https://github.com/desktop/desktop/issues/17385#issuecomment-1718170235)
+> If you're using GitHub Desktop, make sure to add `C:\Program Files\Git\bin`
+> to your **User** and **System** PATH.
+> Learn more in the following solutions: [Solution 1](https://github.com/desktop/desktop/issues/17385#issuecomment-1718170235) and [Solution 2](https://github.com/desktop/desktop/issues/12586#issuecomment-1822189613)
 
 4. Run the development server.
 
