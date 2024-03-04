@@ -42,9 +42,9 @@ export default function CartItem(props: CartItemProps) {
 
   return (
     // Item container
-    <Container className="flex p-4 pr-0 gap-4">
+    <Container className="cart-item-container">
       {/* Image container */}
-      <Container className="p-0 relative w-52 h-52">
+      <Container className="cart-image">
         <Image
           src={props.imageUrl || "/default-image.jpg"}
           alt={props.name}
@@ -59,11 +59,11 @@ export default function CartItem(props: CartItemProps) {
         />
       </Container>
       {/* Content container */}
-      <Container className="p-0">
+      <Container className="cart-content-container">
         {/* Item details container */}
-        <Container className="flex gap-5 p-0">
+        <Container className="cart-item-details">
           {/* Shopping details container */}
-          <Container className="p-0 grow flex flex-col gap-1">
+          <Container className="cart-shopping-details">
             <Typography
               variant="body1"
               component="h2"
@@ -108,17 +108,13 @@ export default function CartItem(props: CartItemProps) {
             ))}
           </Container>
           {/* Price container */}
-          <Typography
-            variant="body1"
-            component="h2"
-            className="flex justify-end text-lg/6 font-bold"
-          >
+          <Typography variant="body1" component="h2" className="cart-price">
             ${props.price.toFixed(2)}
           </Typography>
         </Container>
 
         {/* Bottom tools container: Quantity and item links container */}
-        <Container className="flex items-center gap-2 p-0 mt-2">
+        <Container className="cart-bottom-tools">
           {/* Quantity */}
           <Select
             value={quantity}
@@ -129,7 +125,7 @@ export default function CartItem(props: CartItemProps) {
             sx={{
               "& .MuiSelect-select": { padding: "6px 0px 6px 14px" },
             }}
-            className="rounded-[7px] shadow-md text-[13px]"
+            className="cart-quantity"
           >
             <MenuItem value={0}>0 (Delete)</MenuItem>
             <MenuItem value={1}>1</MenuItem>
@@ -150,7 +146,7 @@ export default function CartItem(props: CartItemProps) {
             href="#"
             underline="hover"
             sx={{ typography: "caption" }}
-            className="text-xs/4 cursor-pointer text-[#007185]"
+            className="cart-links"
           >
             Delete
           </Link>
@@ -162,7 +158,7 @@ export default function CartItem(props: CartItemProps) {
             href="#"
             underline="hover"
             sx={{ typography: "caption" }}
-            className="text-xs/4 cursor-pointer text-[#007185]"
+            className="cart-links"
           >
             Save for later
           </Link>
@@ -174,7 +170,7 @@ export default function CartItem(props: CartItemProps) {
             href="#"
             underline="hover"
             sx={{ typography: "caption" }}
-            className="text-xs/4 cursor-pointer text-[#007185]"
+            className="cart-links"
           >
             Compare with similar items
           </Link>
@@ -186,7 +182,7 @@ export default function CartItem(props: CartItemProps) {
             href="#"
             underline="hover"
             sx={{ typography: "caption" }}
-            className="text-xs/4 cursor-pointer text-[#007185]"
+            className="cart-links"
           >
             Share
           </Link>
