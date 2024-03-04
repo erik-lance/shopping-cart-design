@@ -29,11 +29,13 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
 
   return (
     // remove "bg-white" when setting up theme
+    // Cart items container
     <Container className="bg-white p-5">
       <Typography variant="h4" component="h1">
         Shopping Cart
       </Typography>
       {/* remove "text-[#565959]" when setting up theme */}
+      {/* Price */}
       <Typography
         variant="body2"
         component="h2"
@@ -64,6 +66,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
 
       <Divider />
 
+      {/* Subtotal */}
       <Typography
         variant="body1"
         component="h2"

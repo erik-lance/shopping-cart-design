@@ -41,7 +41,9 @@ export default function CartItem(props: CartItemProps) {
   }
 
   return (
+    // Item container
     <Container className="flex p-4 pr-0 gap-4">
+      {/* Image container */}
       <Container className="p-0 relative w-52 h-52">
         <Image
           src={props.imageUrl || "/default-image.jpg"}
@@ -56,8 +58,11 @@ export default function CartItem(props: CartItemProps) {
           }}
         />
       </Container>
+      {/* Content container */}
       <Container className="p-0">
+        {/* Item details container */}
         <Container className="flex gap-5 p-0">
+          {/* Shopping details container */}
           <Container className="p-0 grow flex flex-col gap-1">
             <Typography
               variant="body1"
@@ -102,6 +107,7 @@ export default function CartItem(props: CartItemProps) {
               </Typography>
             ))}
           </Container>
+          {/* Price container */}
           <Typography
             variant="body1"
             component="h2"
@@ -111,7 +117,9 @@ export default function CartItem(props: CartItemProps) {
           </Typography>
         </Container>
 
+        {/* Bottom tools container: Quantity and item links container */}
         <Container className="flex items-center gap-2 p-0 mt-2">
+          {/* Quantity */}
           <Select
             value={quantity}
             onChange={handleQuantityChange}
@@ -136,7 +144,7 @@ export default function CartItem(props: CartItemProps) {
             <MenuItem value={10}>10+</MenuItem>
           </Select>
           <Divider orientation="vertical" flexItem />
-
+          {/* Item links: Delete, Save for later, Compare, Share */}
           <Link
             component="a"
             href="#"

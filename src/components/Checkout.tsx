@@ -30,7 +30,9 @@ const Checkout: React.FC<CheckoutProps> = ({
   );
 
   return (
+    // Checkout details container
     <Container className="bg-white p-4">
+      {/* Progess bar */}
       <div className="w-full h-2.5 rounded-full bg-green-200 relative overflow-hidden mb-2">
         <div
           className="h-full bg-green-700 absolute"
@@ -38,6 +40,7 @@ const Checkout: React.FC<CheckoutProps> = ({
         />
       </div>
 
+      {/* Progress label */}
       <div className="flex flex-row mb-5">
         <div className="bg-green-700 rounded-full w-5 h-5 flex items-center justify-center mr-2">
           <CheckIcon className="text-white text-sm" />
@@ -49,6 +52,7 @@ const Checkout: React.FC<CheckoutProps> = ({
         </Typography>
       </div>
 
+      {/* Checkout subtotal */}
       <Typography variant="body1" component="h2">
         Subtotal ({totalQuantity} items):{" "}
         <span className="font-bold">${totalPrice.toFixed(2)}</span>
@@ -59,6 +63,7 @@ const Checkout: React.FC<CheckoutProps> = ({
         className="mb-4"
       />
 
+      {/* Checkout button */}
       <Button
         variant="contained"
         className="w-full bg-yellow-500 text-black py-2 rounded-none"
