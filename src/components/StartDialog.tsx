@@ -6,6 +6,7 @@ import {
   DialogContentText,
   DialogActions,
   Button,
+  TextField,
 } from "@mui/material";
 
 interface StartDialogProps {
@@ -18,8 +19,13 @@ const StartDialog: React.FC<StartDialogProps> = ({ open, onStart }) => (
     <DialogTitle>Start Timer</DialogTitle>
     <DialogContent>
       <DialogContentText>
-        Click &quot;Start&quot; to start the timer.
+        Enter nickname and click &quot;Start&quot;.
       </DialogContentText>
+      <TextField
+        className="mt-2"
+        label="Enter nickname"
+        inputProps={{ "data-hj-allow": true }}
+      />
     </DialogContent>
     <DialogActions>
       <Button onClick={onStart}>Start</Button>
