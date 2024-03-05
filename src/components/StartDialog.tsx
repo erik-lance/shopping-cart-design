@@ -24,7 +24,7 @@ const StartDialog: React.FC<StartDialogProps> = ({ open, onStart }) => (
       <TextField
         className="mt-2"
         label="Enter nickname"
-        inputProps={{ "data-hj-allow": true }}
+        inputProps={{ "data-hj-allow": "" }}
       />
     </DialogContent>
     <DialogActions>
