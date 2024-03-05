@@ -30,17 +30,17 @@ const Checkout: React.FC<CheckoutProps> = ({
   );
 
   return (
-    <Container className="bg-white p-4">
-      <div className="w-full h-2.5 rounded-full bg-green-200 relative overflow-hidden mb-2">
-        <div
-          className="h-full bg-green-700 absolute"
-          style={{ width: "70%" }}
-        />
+    // Checkout details container
+    <Container className="checkout-container">
+      {/* Progess bar */}
+      <div className="checkout-progress-bar-bg">
+        <div className="checkout-progress-bar-top" style={{ width: "70%" }} />
       </div>
 
-      <div className="flex flex-row mb-5">
-        <div className="bg-green-700 rounded-full w-5 h-5 flex items-center justify-center mr-2">
-          <CheckIcon className="text-white text-sm" />
+      {/* Progress label */}
+      <div className="checkout-progress-label">
+        <div className="checkout-progress-checkmark">
+          <CheckIcon className="checkout-progress-checkmark-svg" />
         </div>
         <Typography variant="body2" style={{ color: "green" }}>
           Part of your order qualifies for{" "}
@@ -49,6 +49,7 @@ const Checkout: React.FC<CheckoutProps> = ({
         </Typography>
       </div>
 
+      {/* Checkout subtotal */}
       <Typography variant="body1" component="h2">
         Subtotal ({totalQuantity} items):{" "}
         <span className="font-bold">${totalPrice.toFixed(2)}</span>
@@ -59,9 +60,10 @@ const Checkout: React.FC<CheckoutProps> = ({
         className="mb-4"
       />
 
+      {/* Checkout button */}
       <Button
         variant="contained"
-        className="w-full bg-yellow-500 text-black py-2 rounded-none"
+        className="checkout-button"
         onClick={onCheckout}
       >
         Proceed to checkout

@@ -29,15 +29,17 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
 
   return (
     // remove "bg-white" when setting up theme
-    <Container className="bg-white p-5">
+    // Cart items container
+    <Container className="shopping-cart-container">
       <Typography variant="h4" component="h1">
         Shopping Cart
       </Typography>
       {/* remove "text-[#565959]" when setting up theme */}
+      {/* Price */}
       <Typography
         variant="body2"
         component="h2"
-        className="flex justify-end -mt-2 text-[#565959]"
+        className="shopping-cart-price"
       >
         Price
       </Typography>
@@ -64,13 +66,16 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
 
       <Divider />
 
+      {/* Subtotal */}
       <Typography
         variant="body1"
         component="h2"
-        className="flex justify-end text-lg/6 mt-1"
+        className="shopping-cart-subtotal"
       >
         Subtotal ({totalQuantity} Items):{" "}
-        <span className="font-bold pl-1">${totalPrice.toFixed(2)}</span>
+        <span className="shopping-cart-subtotal-price">
+          ${totalPrice.toFixed(2)}
+        </span>
       </Typography>
     </Container>
   );
