@@ -10,12 +10,16 @@ import CheckIcon from "@mui/icons-material/Check";
 interface CheckoutProps {
   quantities: { [id: number]: number };
   prices: { [id: number]: number };
+  containerConfigNum?: string | undefined;
+  buttonConfigNum?: string | undefined;
   onCheckout: () => void;
 }
 
 const Checkout: React.FC<CheckoutProps> = ({
   quantities,
   prices,
+  containerConfigNum,
+  buttonConfigNum,
   onCheckout,
 }) => {
   const totalQuantity: number = Object.values(quantities).reduce(
@@ -31,7 +35,9 @@ const Checkout: React.FC<CheckoutProps> = ({
 
   return (
     // Checkout details container
-    <Container className="checkout-container config-0-position">
+    <Container
+      className={`checkout-container config-${containerConfigNum}-position`}
+    >
       {/* Progess bar */}
       <div className="checkout-progress-bar-bg">
         <div className="checkout-progress-bar-top" style={{ width: "70%" }} />
@@ -63,7 +69,7 @@ const Checkout: React.FC<CheckoutProps> = ({
       {/* Checkout button */}
       <Button
         variant="contained"
-        className="checkout-button config-0"
+        className={`checkout-button config-${buttonConfigNum}`}
         onClick={onCheckout}
       >
         Proceed to checkout
