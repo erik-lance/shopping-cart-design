@@ -231,6 +231,10 @@ body {
   box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
 }
 
+.checkout-button:hover {
+  background-color: var(--amazon-brand-color);
+}
+
 /* Configuration Original */
 .config-0 {
   height: 32px;
@@ -264,10 +268,18 @@ body {
   color: var(--text-color-white);
 }
 
+.config-3:hover {
+  background-color: var(--configuration-blue);
+}
+
 .config-4 {
   /* black color */
   background-color: var(--configuration-black);
   color: var(--text-color-white);
+}
+
+.config-4:hover {
+  background-color: var(--configuration-black);
 }
 
 /* Configuration Position */
