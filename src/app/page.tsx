@@ -7,9 +7,9 @@ import Checkout from "@/components/Checkout";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import { Grid } from "@mui/material";
 import { useState } from "react";
-import StartDialog from "../components/StartDialog";
-import EndDialog from "../components/EndDialog";
-import Timer from "../components/Timer";
+import StartDialog from "@/components/StartDialog";
+import EndDialog from "@/components/EndDialog";
+import Timer from "@/components/Timer";
 
 export default function Home() {
   useHotjar();
