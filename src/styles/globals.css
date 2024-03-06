@@ -11,6 +11,9 @@
   --text-color-black: #000000;
   --amazon-brand-color: #ffd814;
 
+  --configuration-blue: #146eb4;
+  --configuration-black: #111111;
+
   /* Cart Card color vars */
   --cart-background: #ffffff;
   --cart-text-color-light: #565959;
@@ -166,6 +169,8 @@ body {
   /* bg-white p-4 */
   background-color: var(--cart-background);
   padding: 1rem;
+  top: 0;
+  position: relative;
 }
 
 .checkout-progress-bar-bg {
@@ -214,10 +219,63 @@ body {
 
 .checkout-button {
   /* w-full bg-yellow-500 text-black py-2 rounded-none */
-  width: 100%;
   background-color: var(--amazon-brand-color);
   color: var(--text-color-black);
+  height: 32px;
+  font-size: 14px;
+  width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-radius: 0;
+  border-radius: 8px;
+  text-transform: none !important;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+}
+
+/* Configuration Original */
+.config-0 {
+  height: 32px;
+  font-size: 14px;
+  background-color: var(--amazon-brand-color);
+  color: var(--text-color-black);
+}
+
+.config-0-position {
+  position: relative;
+}
+
+/* Configuration Size */
+.config-1 {
+  /* smaller size */
+  height: 24px;
+  font-size: 12px;
+}
+
+.config-2 {
+  /* larger size */
+  height: 45px;
+  font-size: 18px;
+}
+
+/* Configuration Color */
+.config-3 {
+  /* blue color */
+  background-color: var(--configuration-blue);
+  color: var(--text-color-white);
+}
+
+.config-4 {
+  /* black color */
+  background-color: var(--configuration-black);
+  color: var(--text-color-white);
+}
+
+/* Configuration Position */
+.config-5-position {
+  /* sticky */
+  position: sticky;
+}
+
+.config-6-position {
+  /* sticky */
+  position: relative;
 }

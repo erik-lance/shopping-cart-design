@@ -31,7 +31,7 @@ const Checkout: React.FC<CheckoutProps> = ({
 
   return (
     // Checkout details container
-    <Container className="checkout-container">
+    <Container className="checkout-container config-0-position">
       {/* Progess bar */}
       <div className="checkout-progress-bar-bg">
         <div className="checkout-progress-bar-top" style={{ width: "70%" }} />
@@ -63,7 +63,7 @@ const Checkout: React.FC<CheckoutProps> = ({
       {/* Checkout button */}
       <Button
         variant="contained"
-        className="checkout-button"
+        className="checkout-button config-0"
         onClick={onCheckout}
       >
         Proceed to checkout
