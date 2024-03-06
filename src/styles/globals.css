@@ -241,6 +241,7 @@ body {
 
 .config-0-position {
   position: relative;
+  align-self: flex-start;
 }
 
 /* Configuration Size */
@@ -273,9 +274,11 @@ body {
 .config-5-position {
   /* sticky */
   position: sticky;
+  align-self: flex-start;
 }
 
 .config-6-position {
-  /* sticky */
+  /* bottom relative */
   position: relative;
+  align-self: flex-end;
 }

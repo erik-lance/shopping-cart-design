@@ -119,7 +119,7 @@ export default function Home() {
           </Grid>
 
           {/* Checkout Button */}
-          <Grid item xs={4}>
+          <Grid item xs={4} container direction="row">
             <Checkout
               quantities={quantities}
               prices={prices}
