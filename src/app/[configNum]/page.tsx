@@ -13,15 +13,15 @@ import Timer from "@/components/Timer";
 
 export default function Home({ params }: { params: { configNum: string } }) {
   const configNum = parseInt(params.configNum);
-  let containerConfigNum = 0;
-  let buttonConfigNum = 0;
+  let containerConfigNum = "0";
+  let buttonConfigNum = "0";
 
   if (configNum >= 1 && configNum <= 4) {
-    containerConfigNum = 0;
-    buttonConfigNum = configNum;
+    containerConfigNum = "0";
+    buttonConfigNum = configNum.toString();
   } else if (configNum >= 5 && configNum <= 6) {
-    containerConfigNum = configNum;
-    buttonConfigNum = 0;
+    containerConfigNum = configNum.toString();
+    buttonConfigNum = "0";
   }
 
   useHotjar();
