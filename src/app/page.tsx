@@ -10,7 +10,6 @@ import { useState } from "react";
 import StartDialog from "@/components/StartDialog";
 import EndDialog from "@/components/EndDialog";
 import Timer from "@/components/Timer";
-// import cart.json
 import cart from "@/data/cart.json";
 
 export default function Home() {
@@ -41,7 +40,7 @@ export default function Home() {
     }
   };
 
-  const sampleCartItems = cart.sort(() => Math.random() - 0.5).slice(0, 5);
+  const sampleCartItems = cart;
 
   const [quantities, setQuantities] = useState(
     sampleCartItems.reduce(

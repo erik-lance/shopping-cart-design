@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "SAMSUNG Galaxy S24 Ultra Cell Phone, 512GB AI Smartphone, Unlocked Android, 50MP Zoom Camera, Long Battery Life, S Pen, US Version, 2024, Titanium Violet",
-    "price": 1269.99,
+    "price": 999.99,
     "quantity": 1,
     "imageUrl": "https://m.media-amazon.com/images/I/71qeTVe5d1L._AC_SX679_.jpg",
     "description": {},
@@ -49,7 +49,7 @@
     "details": { "color": "Black" }
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "SIHOO M18 Ergonomic Office Chair for Big and Tall People Adjustable Headrest with 2D Armrest Lumbar Support and PU Wheels Swivel Tilt Function Black",
     "price": 149.99,
     "quantity": 1,
@@ -58,7 +58,7 @@
     "details": { "color": "Black" }
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Anne Klein Women's Genuine Diamond Dial Bangle Watch",
     "price": 75.0,
     "quantity": 1,
@@ -67,7 +67,7 @@
     "details": { "color": "Black/Gold" }
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Nine West Women's Strap Watch",
     "price": 36.75,
     "quantity": 1,
@@ -76,7 +76,7 @@
     "details": { "color": "White/Gold" }
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Vibriance Super C Serum for Mature Skin Made in the USA, All-In-One Formula Hydrates, Firms, Lifts, Targets Age Spots, Wrinkles, & Smooths Skin, The Original Super C Serum - 1 fl oz (30 ml), Pack of 3",
     "price": 141.0,
     "quantity": 1,
@@ -85,7 +85,7 @@
     "details": { "size": "1 Fl Oz (Pack of 3)" }
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Bedsure Queen Sheet Set - Soft Sheets for Queen Size Bed, 4 Pieces Hotel Luxury Sky Blue Queen Sheets, Easy Care Polyester Microfiber Cooling Bed Sheet Set",
     "price": 24.99,
     "quantity": 1,
@@ -94,7 +94,7 @@
     "details": { "color": "Sky Blue", "size": "Queen" }
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Razer BlackShark V2 X Gaming Headset: 7.1 Surround Sound - 50mm Drivers - Memory Foam Cushion - for PC, Mac, PS4, PS5, Switch - 3.5mm Audio Jack - White",
     "price": 48.61,
     "quantity": 1,
