@@ -67,7 +67,7 @@ export default function CartItem(props: CartItemProps) {
             <Typography
               variant="body1"
               component="h2"
-              className="flex text-lg/[23px]"
+              className="flex text-lg/[23px] !line-clamp-2"
             >
               {props.name}
             </Typography>
