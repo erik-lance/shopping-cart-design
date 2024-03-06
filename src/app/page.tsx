@@ -124,6 +124,7 @@ export default function Home() {
               quantities={quantities}
               prices={prices}
               onCheckout={handleCheckout}
+              containerConfigNum={"0"}
             />
           </Grid>
         </Grid>
