@@ -49,13 +49,14 @@ export default function CartItem(props: CartItemProps) {
           src={`/items/${props.imageUrl}` || "/default-image.jpg"}
           alt={props.name}
           fill
-          loading="lazy"
+          priority={true}
           onError={(e) => {
             e.currentTarget.src = "/default-image.jpg";
           }}
           style={{
             objectFit: "contain",
           }}
+          sizes="(min-width: 66em) 5vw, (min-width: 44em) 11vw, 18vw"
         />
       </Container>
       {/* Content container */}
