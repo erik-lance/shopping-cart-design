@@ -124,7 +124,9 @@ export default function CartItem(props: CartItemProps) {
             renderValue={(selectValue) => `Qty: ${selectValue}`}
             inputProps={{ "aria-label": "Without label" }}
             sx={{
-              "& .MuiSelect-select": { padding: "6px 0px 6px 14px" },
+              "& .MuiSelect-select": {
+                padding: "6px 26px 6px 11px !important",
+              },
             }}
             className="cart-quantity"
           >
