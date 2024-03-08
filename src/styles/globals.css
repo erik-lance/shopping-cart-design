@@ -202,6 +202,19 @@ body {
   color: var(--cart-link-color);
 }
 
+.removed-text {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: 2rem 1rem;
+}
+
+.removed-text-link {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  cursor: pointer;
+  color: var(--cart-link-color);
+}
+
 /* Checkout Styles */
 
 .checkout-container {
