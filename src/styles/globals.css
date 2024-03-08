@@ -186,7 +186,7 @@ body {
   background: var(--cart-quantity-focus-bg);
 }
 
-.MuiOutlinedInput-notchedOutline {
+.cart-quantity > .MuiOutlinedInput-notchedOutline {
   display: none;
 }
 
