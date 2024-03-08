@@ -146,10 +146,20 @@ body {
   /* flex items-center gap-2 p-0 mt-2 */
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.6rem;
   padding: 0;
   margin-top: 0.5rem;
   flex-wrap: wrap;
+}
+
+/* verical bar */
+.cart-bottom-tools > *:not(:first-child):before {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #dddddd;
+  position: absolute;
+  translate: -13px 0;
 }
 
 .cart-quantity {

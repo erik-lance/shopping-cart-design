@@ -7,7 +7,6 @@ import {
   SelectChangeEvent,
   MenuItem,
   Link,
-  Divider,
 } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -142,7 +141,7 @@ export default function CartItem(props: CartItemProps) {
             <MenuItem value={9}>9</MenuItem>
             <MenuItem value={10}>10+</MenuItem>
           </Select>
-          <Divider orientation="vertical" flexItem />
+
           {/* Item links: Delete, Save for later, Compare, Share */}
           <Link
             component="a"
@@ -154,8 +153,6 @@ export default function CartItem(props: CartItemProps) {
             Delete
           </Link>
 
-          <Divider orientation="vertical" flexItem />
-
           <Link
             component="a"
             href="#"
@@ -166,8 +163,6 @@ export default function CartItem(props: CartItemProps) {
             Save for later
           </Link>
 
-          <Divider orientation="vertical" flexItem />
-
           <Link
             component="a"
             href="#"
@@ -177,8 +172,6 @@ export default function CartItem(props: CartItemProps) {
           >
             Compare with similar items
           </Link>
-
-          <Divider orientation="vertical" flexItem />
 
           <Link
             component="a"
