@@ -20,6 +20,8 @@
   --cart-link-color: #007185;
   --cart-progressbar-bg: 187, 247, 208;
   --cart-prohressbar-top-bg: 21, 128, 61;
+  --cart-quantity-bg: #f0f2f2;
+  --cart-quantity-hover-bg: #e3e6e6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -153,6 +155,11 @@ body {
     0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -2px rgb(0 0 0 / 0.1);
   font-size: 13px;
+  background-color: var(--cart-quantity-bg);
+}
+
+.cart-quantity:hover {
+  background-color: var(--cart-quantity-hover-bg);
 }
 
 .cart-links {

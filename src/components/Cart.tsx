@@ -28,13 +28,11 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
   );
 
   return (
-    // remove "bg-white" when setting up theme
     // Cart items container
     <Container className="shopping-cart-container">
       <Typography variant="h4" component="h1">
         Shopping Cart
       </Typography>
-      {/* remove "text-[#565959]" when setting up theme */}
       {/* Price */}
       <Typography
         variant="body2"
