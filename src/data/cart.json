@@ -4,7 +4,7 @@
     "name": "Samsung 870 EVO SATA III SSD 1TB 2.5” Internal Solid State Drive, Upgrade PC or Laptop Memory and Storage for IT Pros, Creators, Everyday Users, MZ-77E1T0B/AM",
     "price": 74.99,
     "quantity": 2,
-    "imageUrl": "https://m.media-amazon.com/images/I/911ujeCkGfL._AC_AA180_.jpg",
+    "imageUrl": "samsung_ssd.jpg",
     "description": {},
     "details": { "capacity": "1TB" }
   },
@@ -13,7 +13,7 @@
     "name": "SanDisk 512GB Ultra USB 3.0 Flash Drive - SDCZ48-512G-G46, Black",
     "price": 34.99,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/51Hy3E3GW9L._AC_AA360_.jpg",
+    "imageUrl": "sandisk_flashdrive.jpg",
     "description": {},
     "details": { "size": "512GB" }
   },
@@ -22,7 +22,7 @@
     "name": "WisFox 2.4G Wireless Mouse for Laptop, Ergonomic Computer Mouse with USB Receiver and 3 Adjustable Levels, 6 Button Cordless Mouse Wireless Mice for Windows Mac PC Notebook (Grey)",
     "price": 13.99,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/714+t9HR4GL._AC_AA360_.jpg",
+    "imageUrl": "wisfox_mouse.jpg",
     "description": {},
     "details": { "color": "Grey" }
   },
@@ -31,7 +31,7 @@
     "name": "SAMSUNG Galaxy S24 Ultra Cell Phone, 512GB AI Smartphone, Unlocked Android, 50MP Zoom Camera, Long Battery Life, S Pen, US Version, 2024, Titanium Violet",
     "price": 999.99,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/71qeTVe5d1L._AC_SX679_.jpg",
+    "imageUrl": "samsung_galaxys24.jpg",
     "description": {},
     "details": {
       "color": "Titanium Violet",
@@ -44,25 +44,16 @@
     "name": "SIHOO M18 Ergonomic Office Chair for Big and Tall People Adjustable Headrest with 2D Armrest Lumbar Support and PU Wheels Swivel Tilt Function Black",
     "price": 149.99,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/61DJ4TR8FQL._AC_SX679_.jpg",
+    "imageUrl": "sihoo_chair.jpg",
     "description": {},
     "details": { "color": "Black" }
   },
   {
     "id": 6,
-    "name": "SIHOO M18 Ergonomic Office Chair for Big and Tall People Adjustable Headrest with 2D Armrest Lumbar Support and PU Wheels Swivel Tilt Function Black",
-    "price": 149.99,
-    "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/61DJ4TR8FQL._AC_SX679_.jpg",
-    "description": {},
-    "details": { "color": "Black" }
-  },
-  {
-    "id": 7,
     "name": "Anne Klein Women's Genuine Diamond Dial Bangle Watch",
     "price": 75.0,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/71QDsaFZF9L._AC_SX679_.jpg",
+    "imageUrl": "anneklein_watch.jpg",
     "description": {},
     "details": { "color": "Black/Gold" }
   },
@@ -71,7 +62,7 @@
     "name": "Nine West Women's Strap Watch",
     "price": 36.75,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/51RuNa4Ti4L._AC_SY879_.jpg",
+    "imageUrl": "ninewest_watch.jpg",
     "description": {},
     "details": { "color": "White/Gold" }
   },
@@ -80,7 +71,7 @@
     "name": "Vibriance Super C Serum for Mature Skin Made in the USA, All-In-One Formula Hydrates, Firms, Lifts, Targets Age Spots, Wrinkles, & Smooths Skin, The Original Super C Serum - 1 fl oz (30 ml), Pack of 3",
     "price": 141.0,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/71Nqbaiko7L._SX522_.jpg",
+    "imageUrl": "vibriance_serum.jpg",
     "description": {},
     "details": { "size": "1 Fl Oz (Pack of 3)" }
   },
@@ -89,7 +80,7 @@
     "name": "Bedsure Queen Sheet Set - Soft Sheets for Queen Size Bed, 4 Pieces Hotel Luxury Sky Blue Queen Sheets, Easy Care Polyester Microfiber Cooling Bed Sheet Set",
     "price": 24.99,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/81PxqsLC6BL._AC_SX679_.jpg",
+    "imageUrl": "bedsure_sheet.jpg",
     "description": {},
     "details": { "color": "Sky Blue", "size": "Queen" }
   },
@@ -98,7 +89,7 @@
     "name": "Razer BlackShark V2 X Gaming Headset: 7.1 Surround Sound - 50mm Drivers - Memory Foam Cushion - for PC, Mac, PS4, PS5, Switch - 3.5mm Audio Jack - White",
     "price": 48.61,
     "quantity": 1,
-    "imageUrl": "https://m.media-amazon.com/images/I/71MGiPTwXAL._AC_SX522_.jpg",
+    "imageUrl": "razer_headset.jpg",
     "description": {},
     "details": { "color": "White", "size": "3.5mm" }
   }

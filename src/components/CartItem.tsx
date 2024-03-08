@@ -46,7 +46,7 @@ export default function CartItem(props: CartItemProps) {
       {/* Image container */}
       <Container className="cart-image">
         <Image
-          src={props.imageUrl || "/default-image.jpg"}
+          src={`/items/${props.imageUrl}` || "/default-image.jpg"}
           alt={props.name}
           fill
           loading="lazy"
