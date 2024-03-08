@@ -110,7 +110,6 @@ body {
   padding: 0;
   position: relative;
   width: 13rem;
-  height: 13rem;
 }
 
 .cart-content-container {
@@ -153,13 +152,17 @@ body {
 }
 
 /* verical bar */
-.cart-bottom-tools > *:not(:first-child):before {
+.cart-bottom-tools > *:not(:last-child):after {
   content: "";
   width: 1px;
   height: 16px;
   background-color: #dddddd;
   position: absolute;
-  translate: -13px 0;
+  translate: 13px 0;
+}
+
+.cart-bottom-tools > *:first-child::after {
+  translate: 86px 0;
 }
 
 .cart-quantity {

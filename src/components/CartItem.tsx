@@ -55,7 +55,7 @@ export default function CartItem(props: CartItemProps) {
           style={{
             objectFit: "contain",
           }}
-          sizes="(min-width: 66em) 5vw, (min-width: 44em) 11vw, 18vw"
+          sizes="(min-width: 66em) 5vw, (min-width: 44em) 11vw, 14rem"
         />
       </Container>
       {/* Content container */}
