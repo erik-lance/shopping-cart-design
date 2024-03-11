@@ -11,6 +11,16 @@ import {
 import Image from "next/image";
 import React, { useState } from "react";
 
+export interface CartItemObject {
+  id: number;
+  name: string;
+  imageUrl: string;
+  description: object;
+  details: object;
+  price: number;
+  quantity: number;
+}
+
 export interface CartItemProps {
   id: number;
   name: string;
