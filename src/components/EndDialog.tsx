@@ -16,6 +16,7 @@ interface EndDialogProps {
   onTryAgain: () => void;
   incorrectItemsCount: number;
   nickname: string;
+  configNum: string;
 }
 
 const EndDialog: React.FC<EndDialogProps> = ({
@@ -24,6 +25,7 @@ const EndDialog: React.FC<EndDialogProps> = ({
   onTryAgain,
   incorrectItemsCount,
   nickname,
+  configNum,
 }) => (
   <Dialog open={open}>
     <DialogTitle>End Timer</DialogTitle>
@@ -35,7 +37,7 @@ const EndDialog: React.FC<EndDialogProps> = ({
         <IconButton
           onClick={() => {
             navigator.clipboard.writeText(
-              `${nickname}\nTime elapsed: ${timeElapsed} seconds\nMistakes: ${incorrectItemsCount}`,
+              `${nickname}\nConfig: ${configNum}\nTime elapsed: ${timeElapsed} seconds\nMistakes: ${incorrectItemsCount}`,
             );
             alert("Data copied to clipboard");
           }}

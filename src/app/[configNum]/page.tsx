@@ -12,19 +12,23 @@ import EndDialog from "@/components/EndDialog";
 import Timer from "@/components/Timer";
 import cart from "@/data/cart.json";
 import { CartItemObject } from "@/components/CartItem";
+import { useParams } from "next/navigation";
 
-export default function Home({ params }: { params: { configNum: string } }) {
-  const configNum = parseInt(params.configNum);
-  let containerConfigNum = "0";
-  let buttonConfigNum = "0";
+export default function Home() {
+  const configNum: string = useParams().configNum[0];
+  const [containerConfigNum, setContainerConfigNum] = useState("0");
+  const [buttonConfigNum, setButtonConfigNum] = useState("0");
 
-  if (configNum >= 1 && configNum <= 4) {
-    containerConfigNum = "0";
-    buttonConfigNum = configNum.toString();
-  } else if (configNum >= 5 && configNum <= 6) {
-    containerConfigNum = configNum.toString();
-    buttonConfigNum = "0";
-  }
+  useEffect(() => {
+    const num = parseInt(configNum);
+    if (num >= 1 && num <= 4) {
+      setContainerConfigNum("0");
+      setButtonConfigNum(num.toString());
+    } else if (num >= 5 && num <= 6) {
+      setContainerConfigNum(num.toString());
+      setButtonConfigNum("0");
+    }
+  }, [configNum]);
 
   useHotjar();
 
@@ -145,6 +149,7 @@ export default function Home({ params }: { params: { configNum: string } }) {
             quantities,
           )}
           nickname={nickname}
+          configNum={configNum.toString()}
         />
         <Timer start={startTime} onCheckout={handleCheckout} />
         <Grid container spacing={2}>

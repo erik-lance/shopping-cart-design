@@ -133,6 +133,7 @@ export default function Home() {
             goalQuantities,
           )}
           nickname={nickname}
+          configNum={"0"}
         />
         <Timer start={startTime} onCheckout={handleCheckout} />
         <Grid container spacing={2}>
