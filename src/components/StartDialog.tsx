@@ -8,7 +8,9 @@ import {
   DialogActions,
   Button,
   TextField,
+  IconButton,
 } from "@mui/material";
+import { CopyAll } from "@mui/icons-material";
 
 interface StartDialogProps {
   open: boolean;
@@ -26,6 +28,16 @@ const StartDialog: React.FC<StartDialogProps> = ({
     <DialogContent>
       <DialogContentText>
         Task Code: {generateTaskCode(goalItems)}
+        {/* Copy button */}
+        <IconButton
+          onClick={() => {
+            navigator.clipboard.writeText(generateTaskCode(goalItems));
+            alert("Task code copied to clipboard");
+          }}
+          size="small"
+        >
+          <CopyAll />
+        </IconButton>
       </DialogContentText>
       <DialogContentText>
         Enter nickname and click &quot;Start&quot;.

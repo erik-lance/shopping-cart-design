@@ -6,7 +6,9 @@ import {
   DialogContentText,
   DialogActions,
   Button,
+  IconButton,
 } from "@mui/material";
+import { CopyAll } from "@mui/icons-material";
 
 interface EndDialogProps {
   open: boolean;
@@ -26,6 +28,20 @@ const EndDialog: React.FC<EndDialogProps> = ({
     <DialogContent>
       <DialogContentText>Time elapsed: {timeElapsed} seconds</DialogContentText>
       <DialogContentText>Mistakes: {incorrectItemsCount}</DialogContentText>
+      <DialogContentText>
+        Copy data
+        <IconButton
+          onClick={() => {
+            navigator.clipboard.writeText(
+              `Time elapsed: ${timeElapsed} seconds\nMistakes: ${incorrectItemsCount}`,
+            );
+            alert("Data copied to clipboard");
+          }}
+          size="small"
+        >
+          <CopyAll />
+        </IconButton>
+      </DialogContentText>
     </DialogContent>
     <DialogActions>
       <Button onClick={onTryAgain}>Try Again</Button>
