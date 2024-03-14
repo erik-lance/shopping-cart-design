@@ -8,6 +8,7 @@
 # 4. Return the decoded task code, which is the list of tasks for user to copy paste
 
 import json
+import random
 
 # import json file
 cart_json = open('cart.json')
@@ -46,7 +47,7 @@ def prepare_message(task_list: list) -> str:
     # Print task_list
     print(task_list)
 
-    message = ""
+    items_array = []
     for task in task_list:
         print("Decoding: " + task)
         # Note: Item ID and quantity can be two digits
@@ -60,8 +61,18 @@ def prepare_message(task_list: list) -> str:
         print("Item ID: " + str(item_id) + " Quantity: " + str(quantity))
         item_name = cart[item_id]["name"]
         
-        # Add to message
-        message += str(quantity).zfill(2) + " : " + item_name + "\n"
+        # Add to items list array
+        items_array.append(str(quantity).zfill(2) + " " + item_name)
+    
+    # Randomize list before converting to message string
+    random.shuffle(items_array)
+
+    # Also separate by lines --
+    message = ""
+    for item in items_array:
+        message += item + "\n"
+        message += "-------------------\n"
+    
     return message
 
 # Print the message
