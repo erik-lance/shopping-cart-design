@@ -87,9 +87,11 @@ export default function Home() {
     setGoalItems(newGoalItems);
 
     // Prepare task (Randomize the quantity of three items from cart in-place)
-    const randomIndices = Array.from({ length: 3 }, () =>
-      Math.floor(Math.random() * 7),
-    );
+    // Make sure no indices are repeated
+    const randomIndices = new Set<number>();
+    while (randomIndices.size < 3) {
+      randomIndices.add(Math.floor(Math.random() * 7));
+    }
 
     randomIndices.forEach((index) => {
       let randomQuantity = 0;
@@ -97,7 +99,7 @@ export default function Home() {
       // Ensure that the randomized quantity is different from the original quantity
       do {
         randomQuantity = Math.floor(Math.random() * 10) + 1;
-      } while (randomQuantity === randomizedCartItems[index].quantity);
+      } while (randomQuantity == randomizedCartItems[index].quantity);
 
       randomizedCartItems[index].quantity = randomQuantity;
     });
