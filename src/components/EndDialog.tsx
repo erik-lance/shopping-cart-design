@@ -7,8 +7,9 @@ import {
   DialogActions,
   Button,
   IconButton,
+  Snackbar,
 } from "@mui/material";
-import { CopyAll } from "@mui/icons-material";
+import { Close, CopyAll } from "@mui/icons-material";
 
 interface EndDialogProps {
   open: boolean;
@@ -26,31 +27,59 @@ const EndDialog: React.FC<EndDialogProps> = ({
   incorrectItemsCount,
   nickname,
   configNum,
-}) => (
-  <Dialog open={open}>
-    <DialogTitle>End Timer</DialogTitle>
-    <DialogContent>
-      <DialogContentText>Time elapsed: {timeElapsed} seconds</DialogContentText>
-      <DialogContentText>Mistakes: {incorrectItemsCount}</DialogContentText>
-      <DialogContentText>
-        Copy data
-        <IconButton
-          onClick={() => {
-            navigator.clipboard.writeText(
-              `${nickname}\nConfig: ${configNum}\nTime elapsed: ${timeElapsed} seconds\nMistakes: ${incorrectItemsCount}`,
-            );
-            alert("Data copied to clipboard");
-          }}
-          size="small"
-        >
-          <CopyAll />
-        </IconButton>
-      </DialogContentText>
-    </DialogContent>
-    <DialogActions>
-      <Button onClick={onTryAgain}>Try Again</Button>
-    </DialogActions>
-  </Dialog>
-);
+}) => {
+  const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
+  };
+
+  const handleCopyButtonClick = () => {
+    navigator.clipboard.writeText(
+      `${nickname}\nConfig: ${configNum}\nTime elapsed: ${timeElapsed} seconds\nMistakes: ${incorrectItemsCount}`,
+    );
+    setSnackbarOpen(true);
+  };
+
+  return (
+    <>
+      <Dialog open={open}>
+        <DialogTitle>End Timer</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Time elapsed: {timeElapsed} seconds
+          </DialogContentText>
+          <DialogContentText>Mistakes: {incorrectItemsCount}</DialogContentText>
+          <DialogContentText>
+            Copy data
+            <IconButton onClick={handleCopyButtonClick}>
+              <CopyAll />
+            </IconButton>
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={onTryAgain}>Try Again</Button>
+        </DialogActions>
+      </Dialog>
+
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={5000}
+        onClose={handleSnackbarClose}
+        message="Data copied to clipboard"
+        action={
+          <IconButton
+            size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={handleSnackbarClose}
+          >
+            <Close fontSize="small" />
+          </IconButton>
+        }
+      />
+    </>
+  );
+};
 
 export default EndDialog;

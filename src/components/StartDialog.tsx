@@ -9,8 +9,9 @@ import {
   Button,
   TextField,
   IconButton,
+  Snackbar,
 } from "@mui/material";
-import { CopyAll } from "@mui/icons-material";
+import { Close, CopyAll } from "@mui/icons-material";
 
 interface StartDialogProps {
   open: boolean;
@@ -31,38 +32,62 @@ const StartDialog: React.FC<StartDialogProps> = ({
     setNickname(event.target.value);
   };
 
+  const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
+  };
+
+  const handleCopyButtonClick = () => {
+    navigator.clipboard.writeText(generateTaskCode(goalItems));
+    setSnackbarOpen(true);
+  };
+
   return (
-    <Dialog open={open}>
-      <DialogTitle>Start Timer</DialogTitle>
-      <DialogContent>
-        <DialogContentText>
-          Task Code: {generateTaskCode(goalItems)}
-          {/* Copy button */}
+    <>
+      <Dialog open={open}>
+        <DialogTitle>Start Timer</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Copy task code
+            {/* Copy button */}
+            <IconButton onClick={handleCopyButtonClick} size="small">
+              <CopyAll />
+            </IconButton>
+          </DialogContentText>
+          <DialogContentText>
+            Enter nickname and click &quot;Start&quot;.
+          </DialogContentText>
+          <TextField
+            className="mt-2"
+            label="Enter nickname"
+            inputProps={{ "data-hj-allow": "" }}
+            value={nicknameInput}
+            onChange={handleNicknameChange}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={onStart}>Start</Button>
+        </DialogActions>
+      </Dialog>
+
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={5000}
+        onClose={handleSnackbarClose}
+        message="Task code copied to clipboard"
+        action={
           <IconButton
-            onClick={() => {
-              navigator.clipboard.writeText(generateTaskCode(goalItems));
-              alert("Task code copied to clipboard");
-            }}
             size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={handleSnackbarClose}
           >
-            <CopyAll />
+            <Close fontSize="small" />
           </IconButton>
-        </DialogContentText>
-        <DialogContentText>
-          Enter nickname and click &quot;Start&quot;.
-        </DialogContentText>
-        <TextField
-          className="mt-2"
-          label="Enter nickname"
-          inputProps={{ "data-hj-allow": "" }}
-          value={nicknameInput}
-          onChange={handleNicknameChange}
-        />
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={onStart}>Start</Button>
-      </DialogActions>
-    </Dialog>
+        }
+      />
+    </>
   );
 };
 
