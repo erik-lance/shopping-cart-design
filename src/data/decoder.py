@@ -10,9 +10,9 @@
 import json
 import random
 
-# import json file
-cart_json = open('cart.json')
-cart = json.load(cart_json)
+# Load the JSON data
+with open('cart.json', 'r', encoding='utf-8') as cart_json:
+    cart = json.load(cart_json)
 
 # Get input from user
 task_code = input("Enter the task code: ")
