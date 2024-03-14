@@ -49,10 +49,8 @@ export default function Home({ params }: { params: { configNum: string } }) {
   };
 
   const handleTryAgain = () => {
-    const start = new Date();
-    setStartTime(start);
-    setTimeElapsed(0);
-    setEndDialogOpen(false);
+    // Refresh the page to reset the state
+    window.location.reload();
   };
 
   const handleCheckout = () => {
