@@ -28,6 +28,7 @@ export default function Home({ params }: { params: { configNum: string } }) {
 
   useHotjar();
 
+  const [nickname, setNickname] = useState("");
   const [startTime, setStartTime] = useState<Date | null>(null);
   const [startDialogOpen, setStartDialogOpen] = useState(true);
   const [endDialogOpen, setEndDialogOpen] = useState(false);
@@ -133,6 +134,7 @@ export default function Home({ params }: { params: { configNum: string } }) {
           open={startDialogOpen}
           onStart={handleStart}
           goalItems={goalItems}
+          setNickname={setNickname}
         />
         <EndDialog
           open={endDialogOpen}
@@ -142,6 +144,7 @@ export default function Home({ params }: { params: { configNum: string } }) {
             goalQuantities,
             quantities,
           )}
+          nickname={nickname}
         />
         <Timer start={startTime} onCheckout={handleCheckout} />
         <Grid container spacing={2}>

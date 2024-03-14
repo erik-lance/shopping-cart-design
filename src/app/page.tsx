@@ -16,6 +16,7 @@ import { CartItemObject } from "@/components/CartItem";
 export default function Home() {
   useHotjar();
 
+  const [nickname, setNickname] = useState("");
   const [startTime, setStartTime] = useState<Date | null>(null);
   const [startDialogOpen, setStartDialogOpen] = useState(true);
   const [endDialogOpen, setEndDialogOpen] = useState(false);
@@ -121,6 +122,7 @@ export default function Home() {
           open={startDialogOpen}
           onStart={handleStart}
           goalItems={goalItems}
+          setNickname={setNickname}
         />
         <EndDialog
           open={endDialogOpen}
@@ -130,6 +132,7 @@ export default function Home() {
             quantities,
             goalQuantities,
           )}
+          nickname={nickname}
         />
         <Timer start={startTime} onCheckout={handleCheckout} />
         <Grid container spacing={2}>

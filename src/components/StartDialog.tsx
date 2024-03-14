@@ -16,43 +16,55 @@ interface StartDialogProps {
   open: boolean;
   onStart: () => void;
   goalItems: CartItemObject[];
+  setNickname: (nickname: string) => void;
 }
 
 const StartDialog: React.FC<StartDialogProps> = ({
   open,
   onStart,
   goalItems,
-}) => (
-  <Dialog open={open}>
-    <DialogTitle>Start Timer</DialogTitle>
-    <DialogContent>
-      <DialogContentText>
-        Task Code: {generateTaskCode(goalItems)}
-        {/* Copy button */}
-        <IconButton
-          onClick={() => {
-            navigator.clipboard.writeText(generateTaskCode(goalItems));
-            alert("Task code copied to clipboard");
-          }}
-          size="small"
-        >
-          <CopyAll />
-        </IconButton>
-      </DialogContentText>
-      <DialogContentText>
-        Enter nickname and click &quot;Start&quot;.
-      </DialogContentText>
-      <TextField
-        className="mt-2"
-        label="Enter nickname"
-        inputProps={{ "data-hj-allow": "" }}
-      />
-    </DialogContent>
-    <DialogActions>
-      <Button onClick={onStart}>Start</Button>
-    </DialogActions>
-  </Dialog>
-);
+  setNickname,
+}) => {
+  const [nicknameInput, setNicknameInput] = React.useState("");
+  const handleNicknameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNicknameInput(event.target.value);
+    setNickname(event.target.value);
+  };
+
+  return (
+    <Dialog open={open}>
+      <DialogTitle>Start Timer</DialogTitle>
+      <DialogContent>
+        <DialogContentText>
+          Task Code: {generateTaskCode(goalItems)}
+          {/* Copy button */}
+          <IconButton
+            onClick={() => {
+              navigator.clipboard.writeText(generateTaskCode(goalItems));
+              alert("Task code copied to clipboard");
+            }}
+            size="small"
+          >
+            <CopyAll />
+          </IconButton>
+        </DialogContentText>
+        <DialogContentText>
+          Enter nickname and click &quot;Start&quot;.
+        </DialogContentText>
+        <TextField
+          className="mt-2"
+          label="Enter nickname"
+          inputProps={{ "data-hj-allow": "" }}
+          value={nicknameInput}
+          onChange={handleNicknameChange}
+        />
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={onStart}>Start</Button>
+      </DialogActions>
+    </Dialog>
+  );
+};
 
 function generateTaskCode(goalItems: CartItemObject[]): string {
   // Generate a task code from the goal items
