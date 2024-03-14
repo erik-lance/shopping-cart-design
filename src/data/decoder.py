@@ -45,11 +45,9 @@ def decode_task_code(task_str: str) -> list:
 # Make sure quantity is 2 digits
 def prepare_message(task_list: list) -> str:
     # Print task_list
-    print(task_list)
 
     items_array = []
     for task in task_list:
-        print("Decoding: " + task)
         # Note: Item ID and quantity can be two digits
         item_id = task.split("Q")[0][1:]
         quantity = task.split("Q")[1]
@@ -58,7 +56,6 @@ def prepare_message(task_list: list) -> str:
         quantity = int(quantity)
         
         # Get item name from cart.json
-        print("Item ID: " + str(item_id) + " Quantity: " + str(quantity))
         item_name = cart[item_id]["name"]
         
         # Add to items list array
