@@ -15,7 +15,26 @@ with open('cart.json', 'r', encoding='utf-8') as cart_json:
     cart = json.load(cart_json)
 
 # Get input from user
-task_code = input("Enter the task code: ")
+task_code = input("(0 for config order) Enter the task code: ")
+
+# If first character is 0, we are printing the order of configs else provide tasks as normal
+if task_code[0] == "0":
+    print("\nOrder of configs")
+    # We randomize the order of configs (0 - 6)
+    # however, 0,3,4 are always the first 3 configs (but randomized)
+    # and 1,2,5,6 are always the last 4 configs (but randomized)
+    first_three: list = [0, 3, 4]
+    last_four: list = [1, 2, 5, 6]
+
+    # Randomize the order of the first three and last four
+    random.shuffle(first_three)
+    random.shuffle(last_four)
+
+    # Combine and print the order of configs
+    order_of_configs = first_three + last_four
+    print(order_of_configs)
+
+    exit()
 
 # Decode the task code by separating the task code by "I"
 # this is becasue the task code is the item id + quantity
