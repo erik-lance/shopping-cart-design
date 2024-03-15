@@ -21,17 +21,17 @@ task_code = input("(0 for config order) Enter the task code: ")
 if task_code[0] == "0":
     print("\nOrder of configs")
     # We randomize the order of configs (0 - 6)
-    # however, 0,3,4 are always the first 3 configs (but randomized)
-    # and 1,2,5,6 are always the last 4 configs (but randomized)
-    first_three: list = [0, 3, 4]
-    last_four: list = [1, 2, 5, 6]
+    # however, the first number is randomized between 0,3,4
+    # and then the rest are added randomly excluding the first number
+    first:int = random.choice([0, 3, 4])
 
-    # Randomize the order of the first three and last four
-    random.shuffle(first_three)
-    random.shuffle(last_four)
+    # Prepare by randomizing 0-6 but remove the first number
+    rest = list(range(0, 7))
+    rest.remove(first)
+    random.shuffle(rest)
 
     # Combine and print the order of configs
-    order_of_configs = first_three + last_four
+    order_of_configs =  [first] + rest
     print(order_of_configs)
 
     exit()
